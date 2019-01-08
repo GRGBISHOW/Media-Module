@@ -1,0 +1,26 @@
+PODS:
+  - RxAlertController (4.0.0):
+    - RxSwift (~> 4.3.1)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+
+DEPENDENCIES:
+  - RxAlertController (~> 4.0)
+  - RxCocoa
+  - RxSwift (~> 4.3.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RxAlertController
+    - RxCocoa
+    - RxSwift
+
+SPEC CHECKSUMS:
+  RxAlertController: 3306c07f3d2f150b0b3d5d196669a6f34c6df552
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+
+PODFILE CHECKSUM: f0c39dad11cd6871d7a30cefd71f73e75c852323
+
+COCOAPODS: 1.6.0.beta.2
