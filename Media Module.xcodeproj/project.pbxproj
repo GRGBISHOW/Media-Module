@@ -14,8 +14,6 @@
 		4EAF824A21E35F9F00906438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF824921E35F9F00906438 /* Assets.xcassets */; };
 		4EAF824D21E35F9F00906438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF824B21E35F9F00906438 /* LaunchScreen.storyboard */; };
 		4EAF825821E35FA000906438 /* Media_ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF825721E35FA000906438 /* Media_ModuleTests.swift */; };
-		4EAF826421E37AD200906438 /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF826321E37AD200906438 /* Controls.swift */; };
-		4EAF826621E37B4100906438 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF826521E37B4100906438 /* UIView.swift */; };
 		4EAF826821E37EA200906438 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF826721E37EA200906438 /* ImagePicker.swift */; };
 		7445DED4479CC420293E6DD4 /* Pods_Media_Module.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB65B911CD0CF1B533ECB6EE /* Pods_Media_Module.framework */; };
 /* End PBXBuildFile section */
@@ -42,8 +40,6 @@
 		4EAF825321E35FA000906438 /* Media ModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Media ModuleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAF825721E35FA000906438 /* Media_ModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media_ModuleTests.swift; sourceTree = "<group>"; };
 		4EAF825921E35FA000906438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4EAF826321E37AD200906438 /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
-		4EAF826521E37B4100906438 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4EAF826721E37EA200906438 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		711016BB968D73CB2199D61A /* Pods-Media Module.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media Module.release.xcconfig"; path = "Target Support Files/Pods-Media Module/Pods-Media Module.release.xcconfig"; sourceTree = "<group>"; };
 		7DA53CB3D34AE466E1102171 /* Pods-Media Module.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media Module.debug.xcconfig"; path = "Target Support Files/Pods-Media Module/Pods-Media Module.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +71,7 @@
 		4EAF823621E35F8F00906438 = {
 			isa = PBXGroup;
 			children = (
-				4EAF824121E35F8F00906438 /* Media Module */,
+				4EAF824121E35F8F00906438 /* ImagePicker */,
 				4EAF825621E35FA000906438 /* Media ModuleTests */,
 				4EAF824021E35F8F00906438 /* Products */,
 				6F0BAD117394B8BF415CD5E9 /* Pods */,
@@ -92,10 +88,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4EAF824121E35F8F00906438 /* Media Module */ = {
+		4EAF824121E35F8F00906438 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				4EAF826221E3745700906438 /* Media Core */,
+				4EAF826221E3745700906438 /* ImagePicker */,
 				4EAF824221E35F8F00906438 /* AppDelegate.swift */,
 				4EAF824421E35F8F00906438 /* ViewController.swift */,
 				4EAF824621E35F8F00906438 /* Main.storyboard */,
@@ -103,7 +99,7 @@
 				4EAF824B21E35F9F00906438 /* LaunchScreen.storyboard */,
 				4EAF824E21E35F9F00906438 /* Info.plist */,
 			);
-			path = "Media Module";
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		4EAF825621E35FA000906438 /* Media ModuleTests */ = {
@@ -115,14 +111,12 @@
 			path = "Media ModuleTests";
 			sourceTree = "<group>";
 		};
-		4EAF826221E3745700906438 /* Media Core */ = {
+		4EAF826221E3745700906438 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				4EAF826321E37AD200906438 /* Controls.swift */,
-				4EAF826521E37B4100906438 /* UIView.swift */,
 				4EAF826721E37EA200906438 /* ImagePicker.swift */,
 			);
-			path = "Media Core";
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		687B7BC079E7B12FE4CBE0A3 /* Frameworks */ = {
@@ -322,10 +316,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EAF826621E37B4100906438 /* UIView.swift in Sources */,
 				4EAF824521E35F8F00906438 /* ViewController.swift in Sources */,
 				4EAF826821E37EA200906438 /* ImagePicker.swift in Sources */,
-				4EAF826421E37AD200906438 /* Controls.swift in Sources */,
 				4EAF824321E35F8F00906438 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,7 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U92DBT8JL5;
-				INFOPLIST_FILE = "Media Module/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ImagePicker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,7 +503,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U92DBT8JL5;
-				INFOPLIST_FILE = "Media Module/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ImagePicker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

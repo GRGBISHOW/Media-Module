@@ -38,13 +38,11 @@ extension ImagePickable where Self: UIViewController {
     private func getImage(fromSource source: UIImagePickerController.SourceType) -> Observable<UIImage?> {
         return UIImagePickerController.rx.createWithParent(self) { picker in
             picker.sourceType = source
-            picker.allowsEditing = false
+            picker.allowsEditing = true
             }.flatMap({ (controller) -> Observable<[UIImagePickerController.InfoKey : Any]> in
                return controller.rx.didFinishPickingMediaWithInfo
             }).map({ (info) -> UIImage? in
-                print("this is infor\(info)")
-
-                return UIImage()
+                return info[UIImagePickerController.InfoKey.editedImage] as? UIImage
                 })
     }
     
