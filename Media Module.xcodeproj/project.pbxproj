@@ -15,6 +15,7 @@
 		4EAF824D21E35F9F00906438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF824B21E35F9F00906438 /* LaunchScreen.storyboard */; };
 		4EAF825821E35FA000906438 /* Media_ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF825721E35FA000906438 /* Media_ModuleTests.swift */; };
 		4EAF826821E37EA200906438 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF826721E37EA200906438 /* ImagePicker.swift */; };
+		4EAF826B21E754BE00906438 /* UIImagePickerViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF826A21E754BE00906438 /* UIImagePickerViewController+Rx.swift */; };
 		7445DED4479CC420293E6DD4 /* Pods_Media_Module.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB65B911CD0CF1B533ECB6EE /* Pods_Media_Module.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		4EAF825721E35FA000906438 /* Media_ModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media_ModuleTests.swift; sourceTree = "<group>"; };
 		4EAF825921E35FA000906438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EAF826721E37EA200906438 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		4EAF826A21E754BE00906438 /* UIImagePickerViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerViewController+Rx.swift"; sourceTree = "<group>"; };
 		711016BB968D73CB2199D61A /* Pods-Media Module.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media Module.release.xcconfig"; path = "Target Support Files/Pods-Media Module/Pods-Media Module.release.xcconfig"; sourceTree = "<group>"; };
 		7DA53CB3D34AE466E1102171 /* Pods-Media Module.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media Module.debug.xcconfig"; path = "Target Support Files/Pods-Media Module/Pods-Media Module.debug.xcconfig"; sourceTree = "<group>"; };
 		BB65B911CD0CF1B533ECB6EE /* Pods_Media_Module.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Media_Module.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				4EAF826721E37EA200906438 /* ImagePicker.swift */,
+				4EAF826A21E754BE00906438 /* UIImagePickerViewController+Rx.swift */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				4EAF824521E35F8F00906438 /* ViewController.swift in Sources */,
 				4EAF826821E37EA200906438 /* ImagePicker.swift in Sources */,
+				4EAF826B21E754BE00906438 /* UIImagePickerViewController+Rx.swift in Sources */,
 				4EAF824321E35F8F00906438 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
