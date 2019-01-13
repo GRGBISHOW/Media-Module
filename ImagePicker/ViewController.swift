@@ -16,11 +16,7 @@ class ViewController: UIViewController, ImagePickable {
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
-        startBtn.rx.tap.subscribe(onNext:{[weak self] _ in
-            guard let strongSelf = self else {return}
-            strongSelf.getImage().bind(to: strongSelf.showCaseImageView.rx.image).disposed(by: strongSelf.disposeBag)
-        }).disposed(by: disposeBag)
-        // Do any additional setup after loading the view, typically from a nib.
+        startBtn.rx.tap.flatMap{self.getImage()}.bind(to: self.showCaseImageView.rx.image).disposed(by: disposeBag)
     }
     
 
