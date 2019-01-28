@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import AVFoundation
 
 func dismissViewController(_ viewController: UIViewController, animated: Bool) {
     if viewController.isBeingDismissed || viewController.isBeingPresented {
@@ -84,6 +85,28 @@ extension Reactive where Base: UIImagePickerController {
                 print("this is a \(a)")
                 return try castOrThrow(Dictionary<UIImagePickerController.InfoKey, Any>.self, a[1])
             })
+    }
+    
+    
+    /**
+     Reactive wrapper for `delegate` message.
+     */
+    public var didFinishRecordingTo: Observable<URL> {
+        return delegate.methodInvoked(#selector(AVCaptureFileOutputRecordingDelegate.fileOutput(_:didFinishRecordingTo:from:error:))).map { (a) in
+            if a.count > 3 {
+                throw try castOrThrow(Error.self, a[3])
+            }else {
+                return try castOrThrow(URL.self, a[1])
+            }
+            
+        }
+    }
+    
+    
+    public var didStartRecordingTo: Observable<URL> {
+        return delegate.methodInvoked(#selector(AVCaptureFileOutputRecordingDelegate.fileOutput(_:didStartRecordingTo:from:))).map { (a) in
+           return try castOrThrow(URL.self, a[1])
+        }
     }
     
     /**
