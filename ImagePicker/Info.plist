@@ -38,5 +38,7 @@
 	<string>Something</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Something</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Smthing</string>
 </dict>
 </plist>
