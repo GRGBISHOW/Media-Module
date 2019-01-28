@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 import RxSwift
 import RxAlertController
+import MobileCoreServices
+protocol MediaPickable: class {}
 
-protocol ImagePickable: class {}
-
-extension ImagePickable where Self: UIViewController {
+extension MediaPickable where Self: UIViewController {
     
     func getImage() -> Observable<UIImage?> {
        return  UIAlertController.rx.show(in: self,
@@ -43,6 +43,23 @@ extension ImagePickable where Self: UIViewController {
             }).map({ (info) -> UIImage? in
                 return info[UIImagePickerController.InfoKey.editedImage] as? UIImage
                 })
+    }
+    
+    func recordVideo(withDevice device: UIImagePickerController.CameraDevice = .rear,
+                     quality: UIImagePickerController.QualityType = .typeMedium,
+                     maximumDuration: TimeInterval = 600, editable: Bool = false) -> Observable<URL> {
+        return UIImagePickerController.rx.createWithParent(self) { picker in
+            picker.sourceType = .camera
+            picker.mediaTypes = [kUTTypeMovie as String]
+            picker.videoMaximumDuration = maximumDuration
+            picker.videoQuality = quality
+            picker.allowsEditing = editable
+            if UIImagePickerController.isCameraDeviceAvailable(device) {
+                picker.cameraDevice = device
+            }
+            }.flatMap({ (controller) -> Observable<URL> in
+                return controller.rx.didFinishRecordingTo
+            })
     }
     
 }
