@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		133A4A1CB5376D74020018B6 /* Pods_Media_ModuleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DF16A46FF18093620F1827 /* Pods_Media_ModuleTests.framework */; };
+		4E23E04422007135005FA640 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E23E04322007135005FA640 /* MainViewController.swift */; };
 		4EAF824321E35F8F00906438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF824221E35F8F00906438 /* AppDelegate.swift */; };
-		4EAF824521E35F8F00906438 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF824421E35F8F00906438 /* ViewController.swift */; };
+		4EAF824521E35F8F00906438 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF824421E35F8F00906438 /* ImageViewController.swift */; };
 		4EAF824821E35F8F00906438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF824621E35F8F00906438 /* Main.storyboard */; };
 		4EAF824A21E35F9F00906438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF824921E35F9F00906438 /* Assets.xcassets */; };
 		4EAF824D21E35F9F00906438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAF824B21E35F9F00906438 /* LaunchScreen.storyboard */; };
@@ -32,9 +33,10 @@
 
 /* Begin PBXFileReference section */
 		46B51DF2824254EC743AD190 /* Pods-Media ModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Media ModuleTests.release.xcconfig"; path = "Target Support Files/Pods-Media ModuleTests/Pods-Media ModuleTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E23E04322007135005FA640 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4EAF823F21E35F8F00906438 /* Media Module.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Media Module.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EAF824221E35F8F00906438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4EAF824421E35F8F00906438 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4EAF824421E35F8F00906438 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		4EAF824721E35F8F00906438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4EAF824921E35F9F00906438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EAF824C21E35F9F00906438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,7 +99,8 @@
 			children = (
 				4EAF826221E3745700906438 /* MediaPicker */,
 				4EAF824221E35F8F00906438 /* AppDelegate.swift */,
-				4EAF824421E35F8F00906438 /* ViewController.swift */,
+				4EAF824421E35F8F00906438 /* ImageViewController.swift */,
+				4E23E04322007135005FA640 /* MainViewController.swift */,
 				4EAF827021FF092A00906438 /* VideoViewController.swift */,
 				4EAF824621E35F8F00906438 /* Main.storyboard */,
 				4EAF824921E35F9F00906438 /* Assets.xcassets */,
@@ -322,9 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EAF824521E35F8F00906438 /* ViewController.swift in Sources */,
+				4EAF824521E35F8F00906438 /* ImageViewController.swift in Sources */,
 				4EAF826821E37EA200906438 /* MediaPicker.swift in Sources */,
 				4EAF827121FF092A00906438 /* VideoViewController.swift in Sources */,
+				4E23E04422007135005FA640 /* MainViewController.swift in Sources */,
 				4EAF826B21E754BE00906438 /* UIImagePickerViewController+Rx.swift in Sources */,
 				4EAF824321E35F8F00906438 /* AppDelegate.swift in Sources */,
 			);

@@ -7,7 +7,38 @@
 //
 
 import UIKit
+import RxSwift
+import AVFoundation
+class VideoViewController: UIViewController, MediaPickable {
 
+    @IBAction func addVideoBtn(_ sender: Any) {
+        self.recordVideo().subscribe(onNext:{[weak self] url in
+            self?.addAVLayer(withUrl: url)
+            }, onError: { err in
+                print(err.localizedDescription)
+        }).disposed(by: disposeBag)
+        
+    }
+    @IBOutlet weak var camPreview: UIView!
+    var disposeBag = DisposeBag()
+   
+    override func viewDidLoad() {
+       
+    }
+    
+    func addAVLayer(withUrl url:URL) {
+        self.camPreview.layer.sublayers = nil
+        let player = AVPlayer(url: url)
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.camPreview.bounds
+        self.camPreview.layer.addSublayer(playerLayer)
+    }
+    
+    
+    
+    
+    
+}
 
 
 
