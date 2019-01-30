@@ -57,8 +57,10 @@ extension MediaPickable where Self: UIViewController {
             if UIImagePickerController.isCameraDeviceAvailable(device) {
                 picker.cameraDevice = device
             }
-            }.flatMap({ (controller) -> Observable<URL> in
-                return controller.rx.didFinishRecordingTo
+            }.flatMap({ (controller) -> Observable<[UIImagePickerController.InfoKey : Any]> in
+                return controller.rx.didFinishPickingMediaWithInfo
+            }).map({ (info) -> URL in
+                return info[UIImagePickerController.InfoKey.mediaURL] as! URL
             })
     }
     
