@@ -102,7 +102,6 @@ extension Reactive where Base: UIImagePickerController {
         }
     }
     
-    
     public var didStartRecordingTo: Observable<URL> {
         return delegate.methodInvoked(#selector(AVCaptureFileOutputRecordingDelegate.fileOutput(_:didStartRecordingTo:from:))).map { (a) in
            return try castOrThrow(URL.self, a[1])

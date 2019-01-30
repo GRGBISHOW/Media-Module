@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ViewController: UIViewController, MediaPickable {
+class ImageViewController: UIViewController, MediaPickable {
     @IBOutlet weak var showCaseImageView: UIImageView!
     @IBOutlet weak var startBtn: UIButton!
     let disposeBag = DisposeBag()
